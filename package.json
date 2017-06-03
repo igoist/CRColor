@@ -1,0 +1,9 @@
+{
+  "name": "color",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/igoist/CRColor.git"
+  },
+  "homepage": "https://github.com/igoist/CRColor#readme"
+}
