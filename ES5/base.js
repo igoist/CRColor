@@ -1,4 +1,4 @@
-require(['../js/objs'], function(objs) {
+require(['./objs'], function(objs) {
   /*
   * 创建一个 style， 返回其 stylesheet 对象
   * 注意：IE6/7/8中使用 style.stylesheet，其它浏览器 style.sheet
@@ -28,7 +28,6 @@ require(['../js/objs'], function(objs) {
     }
   }
 
-  console.log(colors);
   // {/*<div class="item">
   //   <div class="popover popover-hidden">
   //     <div class="popover-arrow"></div>
@@ -97,20 +96,42 @@ require(['../js/objs'], function(objs) {
     };
 
   for(var i = 0; i < colors.length; i++) {
-    // var item = items[i];
     var item = (function(i) {
       return items[i];
     }(i));
-    // console.log(item);
-
-    // var p = popovers[i];
-    // var p = (function(i) {
-    //   return popovers[i];
-    // }(i));
     var p = item.children[0];
-    console.log(p);
 
     bindClickEvent(item, p);
   }
+
+  var btnMT = document.getElementById('btn-mt');
+  var btnMR = document.getElementById('btn-mr');
+  var btnW = document.getElementById('btn-w');
+  var btnH = document.getElementById('btn-h');
+  var btnSmall = document.getElementById('btn-small');
+  var btnBig = document.getElementById('btn-big');
+  var wrap = document.querySelector('.wrap');
+
+  btnMT.addEventListener('click', function() {
+    wrap.classList.toggle('no-mt');
+  });
+  btnMR.addEventListener('click', function() {
+    wrap.classList.toggle('no-mr');
+  });
+  btnW.addEventListener('click', function() {
+    wrap.classList.toggle('wider');
+  });
+  btnH.addEventListener('click', function() {
+    wrap.classList.toggle('higher');
+  });
+  btnSmall.addEventListener('click', function() {
+    wrap.classList.toggle('smaller');
+    console.log((items[0].offsetWidth - popovers[0].offsetWidth) / 2.0);
+  });
+  btnBig.addEventListener('click', function() {
+    wrap.classList.toggle('bigger');
+  });
+  
 });
+
 
