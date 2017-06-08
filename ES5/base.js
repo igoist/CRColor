@@ -110,6 +110,7 @@ require(['./objs'], function(objs) {
   var btnH = document.getElementById('btn-h');
   var btnSmall = document.getElementById('btn-small');
   var btnBig = document.getElementById('btn-big');
+  var btnHide = document.getElementById('btn-hide');
   var wrap = document.querySelector('.wrap');
 
   btnMT.addEventListener('click', function() {
@@ -130,6 +131,14 @@ require(['./objs'], function(objs) {
   });
   btnBig.addEventListener('click', function() {
     wrap.classList.toggle('bigger');
+  });
+  btnHide.addEventListener('click', function() {
+    for(var i = 0; i < popovers.length; i++) {
+      setTimeout((function(j) {
+        popovers[j].classList.toggle('popover-hidden');
+        console.log(j * 100);
+      }(i)), i * delay);
+    }
   });
   
 });
