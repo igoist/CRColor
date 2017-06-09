@@ -132,12 +132,15 @@ require(['./objs'], function(objs) {
   btnBig.addEventListener('click', function() {
     wrap.classList.toggle('bigger');
   });
+  var ota = function(i) {
+    setTimeout((function(j) {
+      popovers[j].classList.toggle('popover-hidden');
+      console.log(j * 100);
+    }(i)), i * delay);
+  }
   btnHide.addEventListener('click', function() {
     for(var i = 0; i < popovers.length; i++) {
-      setTimeout((function(j) {
-        popovers[j].classList.toggle('popover-hidden');
-        console.log(j * 100);
-      }(i)), i * delay);
+      ota(i);
     }
   });
   
