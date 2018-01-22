@@ -50,13 +50,34 @@ const colors = [
   },
   {
     hex: 'ebcd56'
-  }
+  },
+  {
+    hex: '58b3ff'
+  },
+  {
+    hex: 'ff605f'
+  },
+  {
+    hex: 'ffd52e'
+  },
+  {
+    hex: '49dd8e'
+  },
+  {
+    hex: 'ae99ff'
+  },
+  {
+    hex: '108ee9'
+  },
+  {
+    hex: '42b983'
+  },
 ];
 
 /*
  * 颜色 rgba 信息包含以下：
  * 0x 16进制 #fff
- * HEX #ffffff, 
+ * HEX #ffffff,
  */
 
 // const colorsAlpha = [

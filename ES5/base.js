@@ -1,4 +1,4 @@
-require(['./objs'], function(objs) {
+require(['../js/objs', '../js/ctrl.js'], function(objs) {
   /*
   * 创建一个 style， 返回其 stylesheet 对象
   * 注意：IE6/7/8中使用 style.stylesheet，其它浏览器 style.sheet
@@ -143,7 +143,7 @@ require(['./objs'], function(objs) {
       ota(i);
     }
   });
-  
+
 });
 
 
